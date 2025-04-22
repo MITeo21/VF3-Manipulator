@@ -12,10 +12,12 @@
 // Task Handles
 extern TaskHandle_t debugTaskHandle;
 extern TaskHandle_t serialTaskHandle;
+extern TaskHandle_t servoTaskHandle;
 
 // Tasks
 void debugTask(void *pvParameters);
 void serialTask(void *pvParameters);
+void servoTask(void *pvParameters);
 
 // Shared Types
 enum MessageType {
@@ -40,5 +42,8 @@ struct Message {
         int errorCode;      // ERROR
     };
 };
+
+// Functions
+void servoCommand(int servoID, bool isExtension);
 
 #endif

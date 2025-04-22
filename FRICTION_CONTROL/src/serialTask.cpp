@@ -70,12 +70,10 @@ void executeCommand(Message message){
             returnString = "<PONG:"+ String(message.pingValue == 1) + ">";
             break;
         case MessageType::EXTEND:
-            // TODO: servo command here
-            returnString = "<EXTENDED:" + String(message.servoValue) + ">";
+            servoCommand(message.servoValue, true);
             break;
         case MessageType::RETRACT:
-            // TODO: servo command here
-            returnString = "<RETRACTED:" + String(message.servoValue) + ">";
+            servoCommand(message.servoValue, false);
             break;
         case MessageType::ERROR:
             returnString = "<ERROR_CODE:" + String(message.errorCode) + ">";

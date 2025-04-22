@@ -8,7 +8,7 @@
 
 // DEBUG Task
 #define DEBUG_TASK_ENABLE false
-#define DEBUG_TASK_FREQUENCY 10
+#define DEBUG_TASK_FREQUENCY 1
 #define DEBUG_TASK_PRIORITY 1
 
 // SERIAL task
@@ -17,5 +17,14 @@
 #define SERIAL_TASK_PRIORITY 2
 
 #define BAUD_RATE 115200
+
+// SERVO task
+#define SERVO_TASK_ENABLE true
+#define SERVO_TASK_FREQUENCY 90
+#define SERVO_TASK_PRIORITY 3
+
+#define N_FINGERS 3
+#define EXTENDED_POS_DEG 360
+#define RETRACTED_POS_DEG 0
 
 #endif

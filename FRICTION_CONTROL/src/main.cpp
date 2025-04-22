@@ -39,6 +39,17 @@ void setup() {
   );
 #endif
 
+#if SERVO_TASK_ENABLE
+  xTaskCreate(
+    servoTask,
+    "SERVO",
+    5000,
+    NULL,
+    SERVO_TASK_PRIORITY,
+    &servoTaskHandle
+  );
+#endif
+
   Serial.println("End setup()");
   // DO NOT call vTaskStartScheduler();
 }
