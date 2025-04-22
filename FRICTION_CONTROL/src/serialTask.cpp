@@ -16,7 +16,7 @@ std::queue<Message> incomingMessages;
 
 // === FUNCTIONS === //
 
-// Takes a single message like "<MOTOR:20>" and outputs the correct message 
+// Takes a single message like "<EXTEND:2>" and outputs the correct message 
 Message parseMessage(String input){
     Message output;
     String key;
