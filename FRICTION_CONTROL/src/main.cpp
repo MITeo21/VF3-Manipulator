@@ -28,6 +28,17 @@ void setup() {
   );
 #endif
 
+#if SERIAL_TASK_ENABLE
+  xTaskCreate(
+    serialTask,
+    "SERIAL",
+    5000,
+    NULL,
+    SERIAL_TASK_PRIORITY,
+    &serialTaskHandle
+  );
+#endif
+
   Serial.println("End setup()");
   // DO NOT call vTaskStartScheduler();
 }
