@@ -1,1 +1,4 @@
 venv
+.env
+3VF_Robot/assets
+3VF_Robot/*.urdf
