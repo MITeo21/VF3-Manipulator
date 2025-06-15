@@ -5,6 +5,10 @@
 
 #include "freertos/task.h"
 
+// Prevent brownout warnings
+#include "soc/soc.h"
+#include "soc/rtc_cntl_reg.h"
+
 // === GLOBAL VARIABLES === //
 
 // === SETUP === //
@@ -13,6 +17,8 @@ void setup() {
 
   Serial.begin(115200);
   Serial.println("Hello World!");
+
+  WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable brownout detector
 
   // === initialize SEMAPHORES AND MUTEXES === //
 
