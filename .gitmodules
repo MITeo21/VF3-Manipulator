@@ -1,0 +1,3 @@
+[submodule "ROS2_PACKAGES/vf3_manipulator"]
+	path = ROS2_PACKAGES/vf3_manipulator
+	url = https://github.com/MITeo21/vf3_manipulator.git
