@@ -1,1 +1,2 @@
-# 3VF-Manipulator
+# VF3 Manipulator
+The VF3 manipulator is a low-cost (<£300) 7 DoF gripper intended for dextrous manipulation tasks. It incorporates variable friction finger-tips to perform within-hand manipulation. Instructions on how to build a VF3 Manipulator can be found in the CAD directory. ROS2_PACKAGES contains the ros2 middleware written for this project, and FRICTION_CONTROL contains a Platform.io project implementing the friction change actuation via FreeRTOS firmware on a microcontroller. 
